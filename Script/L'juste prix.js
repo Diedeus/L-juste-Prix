@@ -14,12 +14,16 @@ const valeur = parseInt(document.querySelector("#prix").value);
 
 submit.addEventListener("click", function(e){
     e.preventDefault
-    const valeur = parseInt(document.querySelector("#prix").value);
+    const valeur = parseInt(document.querySelector("#prix").value); 
+    let newp = document.createElement('p')          //! création automatique de balise "p" pour ne pas limiter le nombre de réponse disponible
+    let r = document.querySelector(".reponse")      //! création automatique de balise "p" pour ne pas limiter le nombre de réponse disponible
+
+    
 
     if(valeur < x) {
-
-        newp.textContent = "Votre réponse est en dessous du résultat attendu"
         
+        newp.textContent = "Votre réponse est en dessous du résultat attendu"
+
     } else if (valeur > x) {
 
         newp.textContent = "votre réponse est au dessus du résultat attendu"
@@ -29,14 +33,11 @@ submit.addEventListener("click", function(e){
        newp.textContent = "WOW gg bro, tu as trouver la réponse"
 
     }
+    r.prepend(newp) //! création automatique de balise "p" pour ne pas limiter le nombre de réponse disponible
 })
 
-//! création automatique de balise "p" pour ne pas limiter le nombre de réponse disponible
 
-let newp = document.createElement('p')
-let r = document.querySelector(".reponse")
 
-r.prepend(newp)
 
 
 
