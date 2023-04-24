@@ -17,7 +17,7 @@ submit.addEventListener("click", function(e){
     const valeur = parseInt(document.querySelector("#prix").value); 
     let newp = document.createElement('p')          //! création automatique de balise "p" pour ne pas limiter le nombre de réponse disponible
     let r = document.querySelector(".reponse")      //! création automatique de balise "p" pour ne pas limiter le nombre de réponse disponible
-
+    let y = x - valeur
     
 
     if(valeur < x) {
