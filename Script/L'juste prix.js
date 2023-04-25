@@ -38,7 +38,7 @@ submit.addEventListener("click", function(e){
     } else if (valeur > x) {
         
         newp.textContent = "votre réponse est au dessus du résultat attendu ==>" + valeur
-        y = x - valeur;
+        y = Math.abs( x - valeur );
         barrechofroi (y)
 
     } else if ( valeur === x) {
